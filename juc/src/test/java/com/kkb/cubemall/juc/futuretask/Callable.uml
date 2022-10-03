@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.util.concurrent.Callable</OriginalElement>
+  <nodes>
+    <node x="0.0" y="160.0">java.util.concurrent.RunnableFuture</node>
+    <node x="119.99999999999999" y="0.0">java.lang.FunctionalInterface</node>
+    <node x="180.0" y="160.0">java.lang.Thread</node>
+    <node x="16.0" y="240.0">java.util.concurrent.FutureTask</node>
+    <node x="230.0" y="80.0">java.util.concurrent.Callable</node>
+    <node x="97.99999999999999" y="80.0">java.lang.Runnable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.concurrent.Callable" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-15.0" />
+      <point x="286.0" y="55.0" />
+      <point x="270.0" y="55.0" />
+      <point x="50.0" y="15.0" />
+    </edge>
+    <edge source="java.util.concurrent.FutureTask" target="java.util.concurrent.RunnableFuture">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Runnable" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-15.0" />
+      <point x="154.0" y="55.0" />
+      <point x="170.0" y="55.0" />
+      <point x="-50.0" y="15.0" />
+    </edge>
+    <edge source="java.util.concurrent.RunnableFuture" target="java.lang.Runnable">
+      <point x="0.0" y="-15.0" />
+      <point x="80.0" y="135.0" />
+      <point x="125.99999999999999" y="135.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Thread" target="java.lang.Runnable">
+      <point x="0.0" y="-15.0" />
+      <point x="228.0" y="135.0" />
+      <point x="182.0" y="135.0" />
+      <point x="28.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="185.5" y="138.0" />
+  <SelectedNodes>
+    <node>java.util.concurrent.Callable</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

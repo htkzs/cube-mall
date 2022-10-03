@@ -1,0 +1,54 @@
+server:
+  port: 8084
+
+# mysql
+spring:
+  datasource:
+    #MySQL配置
+    driverClassName: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://47.113.81.149:3306/cube_goods?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://8.133.188.83:3306/cube_order?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: ithubin@163@hubin
+  application:
+      name: cubemall-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 8.133.162.34:8848
+  redis:
+    port: 6379
+    host: 8.133.188.83
+    password: ithubin@163.com.com
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: flag  # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+logging:
+  level:
+    com.kkb.cubemall: debug
+
+# 配置连接池
+cubemall:
+  thread:
+    coreSize: 20
+    maxSize: 100
+    keepAliveTime: 10
+
+# 支付宝相关配置
+alipay:
+  app_id: 2016100100639872
+  merchant_private_key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDE95QY1nZN8q4mWGT6BrQXqEznnMIXJsaElLEhUo1e9mOPVcW6iRyI5+zjy0Ox1FqCtfGlti2yzeL6GtVhF69Yis7Tu7rEtOCsULEfWLewJUlAl3lxuitvjcItYs6M+TNRxsGVqsshvCoDte/Aa27Kt5JsSBrSNE3lfEcV1Id91wyqLUhws85EFMuANyryzsewbeHAOZhhIEbEpsp55/BIqpKGceIuY5Zty+00qaDB+D73PsVV7Bi74koShZC7PVEOJ1rnCDephHz+twKgB14uCIRkJv2zpmHPbZWw5f8KuZpKe5fMUQ6spVvKcpFtoJlW1fVj5nvB1S+eMevJidqHAgMBAAECggEARWbG9Al9HfIIktJKoh6CjmNq1aFScj3jbQvHbepcjb1bT0H1rchqGYM+4PTaIWqlibD6OF18tKf+9glGbjOeQSCHx+s5392r3IuCHX1xG8vHh87Xp87lRyU36i4KgXm9L29M/qNzd6uJUk1k8PPp0dvk5+pwKOjtGZM0qOh95USmb/Mp6nu/HGxmsn/PsagybfVkRavh0Kj2CQpcm/yvhcz/1ZMOYZAYJvaxtMQAdP25tW1MJcbA3rBsU5mVoW42qEnT75HQlZDmgyl9bMjNMKamAEDj2WryTfHAH9UjXXYvBj8z++BENqtpO5TblLdoC9W4vTx8KXLpHaDCS3gSAQKBgQDrqNQC+KPBOidXzJg++dlKS9PRuRyJcfrEw8uWulTItJ2vsr0G4nlZeiF7yG9CCRYkjw/jpTpnUR4c2ku0NR167ngtQnyclhCXsT38GNopzEpkOtdXVeepoU2wfoH4y/8smMj6cd1bmob0dCPFxF4L7qjWR7AaTUgqzEyt5jx4RwKBgQDV98wDjhVaxcaSWxTl1jG1YEIPBKxAgVGwdDxi/k7H8b6C7QoWRIbBMnhe7+ltkQmsOHrIHSDVw3DR9WwXBmoRYmrL+yFmOXB69tLnrvkfWLK+e6BmWgiOTykYkwwkjDmaTL7I3Yf2wIeAOboS57VDRYYR6DotxczNS3eI3ybrwQKBgQC09baf9Xghx9swQ45hRZCCycmFEUWFkb3D3Kn4O2shl/hCU9ltcPlIKU2O9PHiXoHfXvAPmfBIJ/UcqNBbODJEFNy5vIVd5KonIdZ8QEU+tX4mizyS9wdmrdOvhOWfPF7dSxGBp3AYiIe7LXfOxKSHOyPxL6ld+RxCqRD0tIiYvwKBgHBrFjyT7TJZEUCaLDups0pJfcuoN9xYVZQxLf0RAlFY+TCO3Crg7DAblVTEFk/j0UI0FoaHj1XgrqkRmi3qx9XEcLolguHTsf5ZKmxh6TAICTm9eIPuL+qdOslXkRyutCEWy3J7ulDxzP+Y1OPT68+hepR0AAVGlJkUWoSGQkvBAoGBAIxK9uVUhqC5jOjfA6cX67ycXMkuiN94DY9PhldDddZVuUexRkWY31d1aqWQD7BfdCvo9Qv8XIYvfEvHBSp2tDq63IpKvNW+rI8fOnZRJ1EiSuq+xtCjEeEFXRbVC1Rh3+JD5fdjwI4AgmtfPwmJvKWt+qg2dNQ8EpQBUrb/9dUp
+  alipay_public_key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg8ho5kNjTidzwtM9xEoWlTvKhFM6eGyTfKF+UL0sO/G0H3ajsSxp5FcqHhqdB+IHrg8sXRKE/IIOjUHrG1W9BwdUOs558S3r3B1M7AYTVKRROozg2gMhTqj/FMBZdhWQ9yw4MpRJgBW5Cgw1Qoza3rj4GxO+AwES2BfK0aP3FsXHRH2sMCizoG/u7/vc9ES5iAlztXBcMFJp69mou8L5f4fXjGFlUumZfz2df2kbldVZC0+qjCa02Vf4PNcolq6ENeV7g7y5xrKZ/r6yIvBxeh7qTEb3QqYNA+c4SgtXp2h/ArC+JdceVy2SqQWPVzauL94lgUCHR5xKzhmbvFDQ/QIDAQAB
+  notify_url: http://10.20.24.136/payed/notify    # 回调地址
+  return_url: http://localhost:8084/pay/success   # 重定向地址
+  sign_type: RSA2
+  charset: utf-8
+  gateway_url: https://openapi.alipaydev.com/gateway.do
+  alipay_format: JSON
+  timeout: 1m
+

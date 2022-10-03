@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: ware_route
+        uri: lb://cubemall-ware
+        predicates:
+        - Path=/api/ware/**
+        filters:
+        - RewritePath=/api/(?<segment>/?.*), /$\{segment}
+      # 点击商品分类管理访问商品微服务
+      # 原访问地址：http://localhost:8888/api/product/category/list/tree
+      # 需要路由的地址 http://localhost:8080/product/category/list/tree
+      - id: product_route
+        uri: lb://cubemall-product
+        predicates:
+        - Path=/api/product/**
+        filters:
+        - RewritePath=/api/(?<segment>/?.*), /$\{segment}
+      # 原访问地址 localhost:8888/api/thridparty/oss/policy
+      # 需要路由的地址 localhost：30000/oss/policy
+      - id: third-party_route
+        uri: lb://cubemall-third-party
+        predicates:
+        - Path=/api/thirdparty/**
+        filters:
+        - RewritePath=/api/thirdparty/(?<segment>/?.*), /$\{segment}
+      # 访问登录页
+      # 原访问地址 http://localhost:8888/api
+      # 需要路由的地址 http://localhost:8080/renren-fast
+      - id: admin_route
+        uri: lb://renren-fast
+        predicates:
+        - Path=/api/**
+        filters:
+        - RewritePath=/api/(?<segment>/?.*), /renren-fast/$\{segment}

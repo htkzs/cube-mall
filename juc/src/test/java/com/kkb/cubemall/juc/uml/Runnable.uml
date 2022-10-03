@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.lang.Runnable</OriginalElement>
+  <nodes>
+    <node x="16.0" y="290.0">java.util.concurrent.RunnableFuture</node>
+    <node x="341.75" y="0.0">java.lang.FunctionalInterface</node>
+    <node x="5.75" y="86.0">java.util.concurrent.Future</node>
+    <node x="237.0" y="172.0">java.lang.Thread</node>
+    <node x="0.0" y="494.0">java.util.concurrent.FutureTask</node>
+    <node x="477.25" y="86.0">java.util.concurrent.Callable</node>
+    <node x="316.25" y="86.0">java.lang.Runnable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.lang.Runnable" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-18.0" />
+      <point x="386.75" y="61.0" />
+      <point x="404.5" y="61.0" />
+      <point x="-62.75" y="18.0" />
+    </edge>
+    <edge source="java.util.concurrent.RunnableFuture" target="java.lang.Runnable">
+      <point x="50.25" y="-18.0" />
+      <point x="166.75" y="147.0" />
+      <point x="351.5" y="147.0" />
+      <point x="-35.25" y="18.0" />
+    </edge>
+    <edge source="java.util.concurrent.Callable" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-18.0" />
+      <point x="547.75" y="61.0" />
+      <point x="530.0" y="61.0" />
+      <point x="62.75" y="18.0" />
+    </edge>
+    <edge source="java.util.concurrent.RunnableFuture" target="java.util.concurrent.Future">
+      <point x="-50.25" y="-18.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="java.util.concurrent.FutureTask" target="java.util.concurrent.RunnableFuture">
+      <point x="0.0" y="-45.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="java.lang.Thread" target="java.lang.Runnable">
+      <point x="0.0" y="-136.0" />
+      <point x="35.25" y="18.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="309.5" y="292.0" />
+  <SelectedNodes>
+    <node>java.util.concurrent.FutureTask</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

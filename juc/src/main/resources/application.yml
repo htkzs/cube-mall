@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: juc
+server:
+  port: 8080
+logging:
+  level:
+    com.kkb.cubemall: debug
